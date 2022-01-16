@@ -118,7 +118,11 @@ const pageClasses = computed(() => {
             <slot name="home-features" />
           </template>
           <template #footer>
-            <slot name="home-footer" />
+            <p class="footer text-center">
+              <a href="https://beian.miit.gov.cn/">
+                粤ICP备2022001810号-1
+              </a>
+            </p>
           </template>
         </Home>
       </slot>
@@ -160,6 +164,10 @@ const pageClasses = computed(() => {
 <style>
 #ads-container {
   margin: 0 auto;
+}
+.footer {
+  text-align: center;
+  font-size: 12px;
 }
 
 @media (min-width: 420px) {

@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /logo.png
+heroImage: /image/logo.png
 heroAlt: 喵喵喵
 heroText: 脚下的路
 tagline: 不走出去第一步就永远没有结果
@@ -13,5 +13,4 @@ features:
     details: 关于我这个人的思考
   - title: 阅读
     details: 我读过的书
-footer: MIT Licensed | Copyright © 2019-present Evan You
 ---

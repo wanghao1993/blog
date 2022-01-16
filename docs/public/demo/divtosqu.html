@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    #box {
+      position: relative;
+      left: 400px;
+      width: 100px;
+      height: 50px;
+      background: red;
+      transform: skew(-45deg, 0deg);
+    }
+
+    #box::after {
+      content: '';
+      display: block;
+      width: 100px;
+      height: 100px;
+      background: green;
+      position: relative;
+      left: 50px;
+      transform: skewX(45deg);
+    }
+
+    #box::before {
+      content: '';
+      display: block;
+      width: 100px;
+      height: 50px;
+      background: yellow;
+      position: relative;
+      transform: skewY(45deg);
+      top: 50px;
+      left: 100px;
+    }
+  </style>
+  <body>
+    <div id="box"></div>
+  </body>
+</html>

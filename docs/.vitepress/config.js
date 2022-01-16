@@ -4,11 +4,10 @@ module.exports = {
     themeConfig: {
         nav: [
             { text: 'Home', link: '/' },
-            { text: 'Blog', link: '/blog/' }
+            { text: '面经', link: '/blog/' }
         ],
         sidebar:  [
-            { text: 'Blog1', link: '/blog/blog1' },
-            { text: 'Blog2', link: '/blog/blog2' }
+            { text: '面试总结', link: '/blog/interview' }
         ]
     }
 }
