@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a,b as o}from"./app.76bb8ed5.js";const u='{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"interview/index.md","lastUpdated":1642321449051}',s={},n=o("p",null,"\u9762\u8BD5\u603B\u7ED3",-1),r=[n];function c(d,i,_,p,l,f){return a(),t("div",null,r)}var h=e(s,[["render",c]]);export{u as __pageData,h as default};

@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
-    "vitepress": "^0.20.10"
+    "vitepress": "^0.21.6"
   },
   "scripts": {
     "docs:dev": "vitepress dev docs",

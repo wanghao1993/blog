@@ -1,12 +1,9 @@
-import './styles/vars.css';
-import './styles/layout.css';
-import './styles/code.css';
-import './styles/custom-blocks.css';
-import './styles/sidebar-links.css';
-import Layout from './Layout.vue';
-import NotFound from './NotFound.vue';
-const theme = {
-    Layout,
-    NotFound
-};
-export default theme;
+// .vitepress/theme/index.js
+import DefaultTheme from 'vitepress/theme'
+import MyLayout from './MyLayout.vue'
+
+export default {
+  ...DefaultTheme,
+  // override the Layout with a wrapper component that injects the slots
+  Layout: MyLayout
+}
