@@ -30,8 +30,8 @@ jobs:
     - name: Deploy to Staging server
       uses: easingthemes/ssh-deploy@v2.0.7
       env:
-        SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
+        SSH_PRIVATE_KEY: ${{ tencent.SERVER_SSH_KEY }}
         SOURCE: "docs/.vitepress/dist/"
-        REMOTE_HOST: ${{ secrets.DEPLOY_HOST }}
-        REMOTE_USER: ${{ secrets.DEPLOY_USER }}
-        TARGET: ${{ secrets.DEPLOY_REMOTE_DIR }}
+        REMOTE_HOST: ${{ tencent.DEPLOY_HOST }}
+        REMOTE_USER: ${{ tencent.DEPLOY_USER }}
+        TARGET: ${{ tencent.DEPLOY_REMOTE_DIR }}
