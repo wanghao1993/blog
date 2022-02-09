@@ -4,7 +4,7 @@ heroImage: /image/logo.png
 heroAlt: 喵喵喵
 heroText: 脚下的路
 tagline: 不走出去第一步就永远没有结果
-actionText: 开始阅读
+actionText: Start
 actionLink: /interview/
 # features:
 #   - title: 技术
