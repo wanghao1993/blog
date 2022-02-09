@@ -26,3 +26,12 @@ jobs:
       run: |
         yarn
         yarn docs:build
+        
+    - name: Deploy to Staging server
+      uses: easingthemes/ssh-deploy@main
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
+        SOURCE: "docs/.vitepress/dist/"
+        REMOTE_HOST: ${{ secrets.DEPLOY_HOST }}
+        REMOTE_USER: ${{ secrets.DEPLOY_USER }}
+        TARGET: ${{ secrets.DEPLOY_REMOTE_DIR }}
