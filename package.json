@@ -1,19 +1,14 @@
 {
-  "name": "blog",
+  "name": "MyWorld",
   "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "devDependencies": {
-    "@types/react": "^17.0.39",
-    "@types/react-dom": "^17.0.11",
-    "vitepress": "^0.21.6"
-  },
+  "author": "issac.wang",
   "scripts": {
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs"
+    "dev": "vuepress dev . --open --host \"localhost\"",
+    "build": "vuepress build ."
   },
-  "dependencies": {
-    "less": "^4.1.2"
-  }
+  "devDependencies": {
+    "vuepress": "1.8.2",
+    "vuepress-theme-reco": "1.6.10"
+  },
+  "description": "个人的一些学习笔记和随想"
 }
