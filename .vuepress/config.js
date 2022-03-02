@@ -11,12 +11,19 @@ module.exports = {
     nav: [
       { text: 'Home', link: '/', icon: 'reco-home' },
       { text: '时间轴', link: '/timeline/', icon: 'reco-date' },
-      // { text: 'Docs', 
-      //   icon: 'reco-message',
-      //   items: [
-      //     { text: 'vuepress-reco', link: '/docs/theme-reco/' }
-      //   ]
-      // },
+      { text: 'Docs', 
+        icon: 'reco-doc',
+        items: [
+          { text: 'TS学习', link: '/docs/typescript/' },
+          { text: 'Vue2.0源码解读', link: '/docs/vue/' }
+        ]
+      },
+      { text: 'Tag', 
+        icon: 'reco-tag',
+        items: [
+          { text: 'JS', link: '/blogs/frontend/js/event' }
+        ]
+      },
       { text: 'Contact', 
         icon: 'reco-message',
         items: [
@@ -26,15 +33,16 @@ module.exports = {
       }
     ],
     sidebar: {
-      '/docs/theme-reco/': [
+      '/docs/typescript/': [
         '',
-        'theme',
-        'plugin',
-        'api'
+        'typescript-questions'
       ],
       '/docs/interview/': [
         '',
         'summary'
+      ],
+      '/docs/vue/': [
+        'source-code-1'
       ]
     },  
     type: 'blog',
