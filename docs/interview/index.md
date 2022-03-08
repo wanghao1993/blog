@@ -1,8 +1,6 @@
 ---
-title: first page in category1
-date: 2018-12-15
-tags:
- - tag1
+title: 面试总结
+date: 2022-01-12
 categories:
- -  JS
+ -  面试
 ---

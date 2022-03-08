@@ -1,3 +1,9 @@
+---
+title: 面试总结一
+date: 2022-01-12
+categories:
+ -  面试
+---
 
 # 面试总结
 
@@ -82,7 +88,7 @@
 参考一下这个文章: [常见图片格式：bmp、jpg、jpeg、gif、png 的区别；十六进制查看图片文件等图片知识积累](https://juejin.cn/post/7011915506298912798#heading-18)
 **留个疑问：矢量图为什么不会模糊**
 
-### 6.Flex和grid布局相关，这部分大搞复习一下即可
+### 6.Flex和grid布局相关，这部分大概复习一下即可
 
 可参考[Flex 布局教程：语法篇](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?utm_source=tuicool)
 

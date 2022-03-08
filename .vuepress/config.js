@@ -14,17 +14,18 @@ module.exports = {
       { text: '分类', 
         icon: 'reco-doc',
         items: [
-          { text: 'TS学习', link: '/docs/typescript/' },
-          { text: 'Vue2.0源码解读', link: '/docs/vue/' }
+          { text: 'TypeScript', link: '/docs/typescript/' },
+          { text: 'Vue2.0源码解读', link: '/docs/vue/' },
+          { text: '面试', link: '/docs/interview/' }
         ]
       },
-      { text: 'Tag', 
+      { text: '标签', 
         icon: 'reco-tag',
         items: [
           { text: 'JS', link: '/blogs/frontend/js/event' }
         ]
       },
-      { text: 'Contact', 
+      { text: '社交', 
         icon: 'reco-message',
         items: [
           { text: 'GitHub', link: 'https://github.com/wanghao1993', icon: 'reco-github' },
