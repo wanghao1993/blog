@@ -11,7 +11,7 @@ module.exports = {
     nav: [
       { text: 'Home', link: '/', icon: 'reco-home' },
       { text: '时间轴', link: '/timeline/', icon: 'reco-date' },
-      { text: 'Docs', 
+      { text: '分类', 
         icon: 'reco-doc',
         items: [
           { text: 'TS学习', link: '/docs/typescript/' },
@@ -35,6 +35,7 @@ module.exports = {
     sidebar: {
       '/docs/typescript/': [
         '',
+        '1',
         'typescript-questions'
       ],
       '/docs/interview/': [
