@@ -8,6 +8,7 @@ module.exports = {
   ],
   theme: 'reco',
   themeConfig: {
+    subSidebar: 'auto',
     nav: [
       { text: 'Home', link: '/', icon: 'reco-home' },
       { text: '时间轴', link: '/timeline/', icon: 'reco-date' },
@@ -37,7 +38,7 @@ module.exports = {
       '/docs/typescript/': [
         '',
         '1',
-        'typescript-questions'
+        '2'
       ],
       '/docs/interview/': [
         '',
