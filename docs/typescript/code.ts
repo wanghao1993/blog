@@ -35,3 +35,37 @@ sayName(userInfo || {})
 
 let arr2: Array<number> = [1, 2, 3, '4']
 
+
+// 泛型参数
+const swap = <T, U>(arr: [T, U]): [U, T] => {
+  return [arr[1], arr[0]]
+}
+// 接口
+
+interface Swap <T>{
+  (param: T): T
+}
+// 类
+
+class Stack<T> {
+  private arr: T[] = []
+  public push(item: T) {
+    this.arr.push(item)
+  }
+
+  public getArr(): T[] {
+    return this.arr
+  }
+}
+
+
+const s = new Stack()
+s.push(1)
+s.getArr()
+
+
+let uniType: string|string[] = []
+
+uniType = '1'
+
+uniType = ['1']
