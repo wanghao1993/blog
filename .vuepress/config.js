@@ -39,8 +39,7 @@ module.exports = {
     sidebar: {
       '/docs/typescript/': [
         '',
-        '1',
-        '2'
+        '1'
       ],
       '/docs/vue/': [
         '1',
