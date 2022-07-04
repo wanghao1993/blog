@@ -17,7 +17,9 @@ module.exports = {
         items: [
           { text: 'TypeScript', link: '/docs/typescript/' },
           { text: 'Vue2.0源码解读', link: '/docs/vue/' },
-          { text: '面试', link: '/docs/interview/' }
+          { text: '性能优化', link: '/docs/optimization/' },
+          { text: '一些源码', link: '/docs/source-code/' },
+          // { text: '面试', link: '/docs/interview/' }
         ]
       },
       { text: '标签', 
@@ -40,12 +42,23 @@ module.exports = {
         '1',
         '2'
       ],
-      '/docs/interview/': [
-        '',
-        'summary'
-      ],
       '/docs/vue/': [
-        'source-code-1'
+        '1',
+        '2',
+        '3',
+        '4'
+      ],
+      '/docs/optimization/': [
+        '',
+        '1',
+        '2',
+        '3',
+      ],
+      '/docs/source-code/': [
+        '',
+        'vue-utils',
+        'devtools',
+        'vue-release'
       ]
     },  
     type: 'blog',
