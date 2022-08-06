@@ -69,3 +69,28 @@ let uniType: string|string[] = []
 uniType = '1'
 
 uniType = ['1']
+
+
+//  交叉类型
+
+interface B {
+  name: string;
+  age: number
+}
+
+interface C {
+  area: string;
+  female: number
+}
+
+type Person = B & C
+const persona: Person = {
+  name: 'xiaoming',
+  age: 18,
+  area: 'shanghai',
+  female: 1,
+}
+
+type A = string | number
+
+type S = string & number
