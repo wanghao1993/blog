@@ -82,7 +82,8 @@ interface C {
   area: string;
   female: number
 }
-
+const bigNumber: bigint = 100n
+const s1: symbol = Symbol(1)
 type Person = B & C
 const persona: Person = {
   name: 'xiaoming',
@@ -94,3 +95,166 @@ const persona: Person = {
 type A = string | number
 
 type S = string & number
+
+
+const el: HTMLInputElement = document.getElementById('input_1') as HTMLInputElement
+
+
+type Hello= 'hello'
+
+
+const h: Hello = 'hello world' // error
+
+
+function printText(s: string, alignment: "left" | "right" | "center") {
+  // ...
+}
+printText("Hello, world", "left");
+printText("G'day, mate", "centre");
+
+
+// 接口的继承扩展
+
+interface Animal {
+  type: string
+}
+
+interface Cat {
+  name: string
+}
+
+
+interface Animal {
+  age?: string
+}
+
+interface Tiger extends Animal, Cat {}
+
+const t1: Tiger = {
+  type: 'xx',
+  name: 'xx'
+}
+
+// 类型别名
+
+type Animal1 = {
+  type: string
+}
+
+
+type Animal1 = {
+  age: string
+}
+
+type Cat1 = {
+  name: string
+}
+
+type Tiger2  = Animal1 & Cat1
+
+const t2: Tiger2 = {
+  type: 'tiger',
+  name: '瘦虎'
+}
+
+type s1 = string
+
+
+type ParseParam<Param extends string> = 
+    Param extends `${infer Key}=${infer Value}`
+        ? {
+            [K in Key]: Value 
+        } : {};
+
+type MergeValues<One, Other> = 
+    One extends Other 
+        ? One
+        : Other extends unknown[]
+            ? [One, ...Other]
+            : [One, Other];
+
+type MergeParams<
+    OneParam extends Record<string, any>,
+    OtherParam extends Record<string, any>
+> = {
+  [Key in keyof OneParam | keyof OtherParam]: 
+    Key extends keyof OneParam
+        ? Key extends keyof OtherParam
+            ? MergeValues<OneParam[Key], OtherParam[Key]>
+            : OneParam[Key]
+        : Key extends keyof OtherParam 
+            ? OtherParam[Key] 
+            : never
+}
+type ParseQueryString<Str extends string> = 
+    Str extends `${infer Param}&${infer Rest}`
+        ? MergeParams<ParseParam<Param>, ParseQueryString<Rest>>
+        : ParseParam<Str>;
+
+// 用数组的第一个做类型
+
+type First<Arr extends unknown[]> = Arr extends [infer First, ...unknown[]] ? First : never
+
+type F1 = First<['1',2,3]>
+
+type F2 = First<[1,2,3]>
+
+const ff1: F1 = '1'
+const ff2: F2 = 1
+
+type Last<Arr extends unknown[]> = Arr extends [...unknown[], infer Last] ? Last : never
+
+type L1 = Last<['1',2,'33']>
+
+type L2 = Last<[1,2,3]>
+
+const Ll1: L1 = '33'
+const Ll2: L2 = 3
+
+
+
+type Split<
+  S extends string,
+  SEP extends string,
+  R extends any[] = []
+> = S extends `${infer _}`
+      ? S extends `${infer S1}${SEP}${infer S2}`
+        ? Split<S2, SEP, [...R, S1]>
+        : S extends ''
+          ? SEP extends ''
+            ? R
+            : [...R, S]
+          : [...R, S]
+      : string[]
+
+type StrArr = Split<'hello world', ' '>
+
+
+type Arr = string[]
+
+type ArrToTuple<arr extends unknown[], count extends number> = [...arr, count]
+
+type Tup1 = ArrToTuple<['1', '2'], 3>
+
+
+type Flatten<
+  T extends any[]
+> = T extends [infer L, ...infer R]
+      ? L extends any[]
+        ? [...Flatten<L>, ...Flatten<R>]
+        : [L, ...Flatten<R>]
+      : []
+
+type Fla1 = Flatten<[[1,2, [3,4]], 4]>
+
+
+type StringToArr<S extends string, U extends unknown[]> = S extends `${infer Char}${infer R}` ? StringToArr<R, [...U, Char]> : U
+
+
+type Sa = StringToArr<'我有一个梦想', []>
+
+
+type ArrToString<Arr extends any[], R extends string = ''> = Arr extends [infer First, ...infer Rest] ? Rest['length'] extends 0 
+? `${Rest extends '' ? '' : `${R}`}${First&string}` : ArrToString<Rest, `${R extends '' ? '' : `${R}`}${First&string}`> : R
+
+type R1 = ArrToString<['1', '2']>
