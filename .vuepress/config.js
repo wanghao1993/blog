@@ -100,6 +100,10 @@ module.exports = {
     authorAvatar: '/logo.png',
     // 备案号
     record: '粤ICP备2022001810号',
+    recordLink: 'https://beian.miit.gov.cn/',
+    cyberSecurityRecord: '粤ICP备2022001810号',
+    record: '粤ICP备2022001810号',
+    cyberSecurityLink: 'https://beian.miit.gov.cn/',
     // 项目开始时间
     startYear: '2022'
     /**
