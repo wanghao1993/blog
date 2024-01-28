@@ -11,7 +11,7 @@
     "@babel/parser": "^7.18.5",
     "@babel/traverse": "^7.18.5",
     "vuepress": "1.8.2",
-    "vuepress-theme-reco": "1.6.10"
+    "vuepress-theme-reco": "1.6.17"
   },
   "description": "个人的一些学习笔记和随想",
   "dependencies": {
