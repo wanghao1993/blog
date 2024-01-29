@@ -1,5 +1,5 @@
 module.exports = {
-  title: '天上的月亮',
+  title: '在路上',
   description: 'About my thoughts and blog',
   dest: 'public',
   head: [
@@ -16,12 +16,6 @@ module.exports = {
   themeConfig: {
     subSidebar: 'auto',
     nav: [
-      // {
-      //   text: 'JS',
-      //   icon: 'reco-doc',
-      //   items: [{ text: 'Js', link: '/category/js/' }],
-      // },
-
       {
         text: '社交',
         icon: 'reco-message',
@@ -63,8 +57,7 @@ module.exports = {
     // 自动形成侧边导航
     sidebar: 'auto',
     // 最后更新时间
-    lastUpdated: 'Last Updated',
-    // 作者
+    lastUpdated: true,
     author: 'isaac Wang',
     // 作者头像
     authorAvatar: '/logo.png',

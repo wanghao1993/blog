@@ -15,6 +15,7 @@
   },
   "description": "个人的一些学习笔记和随想",
   "dependencies": {
-    "@babel/types": "^7.18.4"
+    "@babel/types": "^7.18.4",
+    "@vuepress-reco/vuepress-plugin-loading-page": "^1.6.13"
   }
 }

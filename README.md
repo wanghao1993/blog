@@ -1,17 +1,18 @@
 ---
 home: true
 heroText: '是光'
-tagline: '  '
+tagline: ' '
 heroImage: /banner.png
 heroImageStyle: {
-  maxWidth: '600px',
-  width: '100%',
-  display: block,
-  margin: '3rem auto 2rem',
-  background: '#fff',
-  borderRadius: '1rem',
+  minWidth: '100vw' ,
+  margin: 3.2rem 0 auto,
+  max
 }
 bgImageStyle: {
-  height: '450px'
+  margin: 0,
+  padding: 0,
+  background: '#fff',
+  display: 'block',
+  height: '100vh',
 }
 isShowTitleInHome: false

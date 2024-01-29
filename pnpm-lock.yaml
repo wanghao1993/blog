@@ -5,11 +5,13 @@ specifiers:
   '@babel/parser': ^7.18.5
   '@babel/traverse': ^7.18.5
   '@babel/types': ^7.18.4
+  '@vuepress-reco/vuepress-plugin-loading-page': ^1.6.13
   vuepress: 1.8.2
   vuepress-theme-reco: 1.6.17
 
 dependencies:
   '@babel/types': 7.23.9
+  '@vuepress-reco/vuepress-plugin-loading-page': 1.6.13
 
 devDependencies:
   '@babel/generator': 7.23.6
@@ -1799,6 +1801,10 @@ packages:
       - supports-color
       - utf-8-validate
     dev: true
+
+  /@vuepress-reco/vuepress-plugin-loading-page/1.6.13:
+    resolution: {integrity: sha512-OuSqH3k2gaobJ71TTQvDq/rUNlNqC5Nsdte2Wv46MGKyQB7bzmy7SSneQPARlZbWbF57IpxLy3dQCB/vBsf+yA==}
+    dev: false
 
   /@vuepress-reco/vuepress-plugin-pagation/1.6.17:
     resolution: {integrity: sha512-JL5ThROczUYc1P54SnZ7E1TG8rnOBIdDHlzPRHbgAhxatPb3dKp/s8QUpmR0YSpXnA5hJJS6LZFM1UAPsU6t+w==}
@@ -4811,18 +4817,6 @@ packages:
         optional: true
     dev: true
 
-  /follow-redirects/1.15.5_debug@4.3.4:
-    resolution: {integrity: sha512-vSFWUON1B+yAw1VN4xMfxgn5fTUiaOzAJCKBwIIgT/+7CuGy9+r+5gITvP62j3RmaD5Ph65UaERdOSRGUzZtgw==}
-    engines: {node: '>=4.0'}
-    peerDependencies:
-      debug: '*'
-    peerDependenciesMeta:
-      debug:
-        optional: true
-    dependencies:
-      debug: 4.3.4_supports-color@6.1.0
-    dev: true
-
   /for-each/0.3.3:
     resolution: {integrity: sha512-jqYfLp7mo9vIyQf8ykW2v7A+2N4QjeCeI5+Dz9XraiO1ign81wjiH7Fb9vSOWvQfNtmSa4H2RoQTrrXivdUZmw==}
     dependencies:
@@ -5439,7 +5433,7 @@ packages:
     engines: {node: '>=8.0.0'}
     dependencies:
       eventemitter3: 4.0.7
-      follow-redirects: 1.15.5_debug@4.3.4
+      follow-redirects: 1.15.5
       requires-port: 1.0.0
     transitivePeerDependencies:
       - debug
