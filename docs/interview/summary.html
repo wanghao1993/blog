@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>&#x9762;&#x8bd5;&#x603b;&#x7ed3;</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <hr>
+<p>title: 面试总结一
+date: 2022-01-12
+categories:</p>
+<ul>
+<li>面试</li>
+</ul>
+<hr>
+<h1 id="面试总结">面试总结</h1>
+<p>最近在面试，也面了那么几家公司，有大厂，小厂等公司，我在这里总结一下。</p>
+<p>大概可以分为以下几部分：</p>
+<ul>
+<li>CSS</li>
+<li>JS</li>
+<li>网络</li>
+<li>算法</li>
+<li>安全</li>
+<li>性能优化</li>
+<li>工程化</li>
+</ul>
+<h2 id="1-css相关">1. CSS相关</h2>
+<h3 id="1怎么样能够使得元素看不见">1.怎么样能够使得元素看不见？</h3>
+<blockquote>
+<p>1.display: none
+2.visibility: hidden
+3.opacity: 0
+4.z-index: -1</p>
+</blockquote>
+<pre><code>注意其中的区别，那些会导致页面结构改变。
+</code></pre>
+<h3 id="2水平垂直居中的方式">2.水平垂直居中的方式</h3>
+<blockquote>
+<p>不做解释</p>
+</blockquote>
+<h3 id="3使用一个div实现一个肉眼看起来的是一个立方体显示404可以刷新一下">3.使用一个div实现一个肉眼看起来的是一个<a href="/demo/divtosqu.html">立方体</a>（显示404可以刷新一下）</h3>
+<blockquote>
+<p>这里主要考察的是 <em>transform</em></p>
+</blockquote>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&#x27;box&#x27;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<pre><code class="language-css"><span class="hljs-selector-id">#box</span> {
+    <span class="hljs-attribute">position</span>: relative;
+    <span class="hljs-attribute">left</span>: <span class="hljs-number">400px</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">50px</span>;
+    <span class="hljs-attribute">background</span>: red;
+    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">skew</span>(-<span class="hljs-number">45deg</span>, <span class="hljs-number">0deg</span>);
+}
+
+<span class="hljs-selector-id">#box</span><span class="hljs-selector-pseudo">::after</span> {
+    <span class="hljs-attribute">content</span>: <span class="hljs-string">&#x27;&#x27;</span>;
+    <span class="hljs-attribute">display</span>: block;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;
+    <span class="hljs-attribute">background</span>: green;
+    <span class="hljs-attribute">position</span>: relative;
+    <span class="hljs-attribute">left</span>: <span class="hljs-number">50px</span>;
+    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">skewX</span>(<span class="hljs-number">45deg</span>);
+}
+
+<span class="hljs-selector-id">#box</span><span class="hljs-selector-pseudo">::before</span> {
+    <span class="hljs-attribute">content</span>: <span class="hljs-string">&#x27;&#x27;</span>;
+    <span class="hljs-attribute">display</span>: block;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">50px</span>;
+    <span class="hljs-attribute">background</span>: yellow;
+    <span class="hljs-attribute">position</span>: relative;
+    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">skewY</span>(<span class="hljs-number">45deg</span>);
+    <span class="hljs-attribute">top</span>: <span class="hljs-number">50px</span>;
+    <span class="hljs-attribute">left</span>: <span class="hljs-number">100px</span>;
+}
+</code></pre>
+<h3 id="4实现逐帧动画">4.实现逐帧动画</h3>
+<blockquote>
+<p>首先什么是逐帧动画？可能不经常做动画的同学都不是很了解这个概念。
+<strong>是一种动画技术，其原理即将每帧不同的图像连续播放，从而产生动画效果。</strong>
+例如连续翻动漫画，速度足够快，就像形成动画一样。</p>
+</blockquote>
+<blockquote>
+<p>使人感觉比较流畅的动画，大概是一秒钟60帧，那么就意味，每16.67ms至少就切换一次图像，这样才能达到流畅的视觉效果，否则会觉得卡顿。</p>
+</blockquote>
+<p><a href="/demo/animations.html">这是我实现的</a>，显示404可以刷新一下</p>
+<blockquote>
+<p>这里要复习的点就是 animation的一些参数，这里的关键点在于 <em>steps</em>函数</p>
+</blockquote>
+<h3 id="5pngjpgwebpgif有什么区别">5.png,jpg,webp,gif有什么区别？</h3>
+<p>参考一下这个文章: <a href="https://juejin.cn/post/7011915506298912798#heading-18">常见图片格式：bmp、jpg、jpeg、gif、png 的区别；十六进制查看图片文件等图片知识积累</a>
+<strong>留个疑问：矢量图为什么不会模糊</strong></p>
+<h3 id="6flex和grid布局相关这部分大概复习一下即可">6.Flex和grid布局相关，这部分大概复习一下即可</h3>
+<p>可参考<a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?utm_source=tuicool">Flex 布局教程：语法篇</a></p>
+<h3 id="总结">总结</h3>
+<p>中小公司问css问的不多，大厂会问的比较多，且可能是我们平时不注意的，不可忽视啊，哎，难顶啊，哈哈～</p>
+<h2 id="2-js相关">2. JS相关</h2>
+<h3 id="1原型和原型链继承">1.原型和原型链，继承</h3>
+<blockquote>
+<p>涉及的点：1.概念 2.各个继承的优缺点等等，我之前写过一点点
+<a href="https://juejin.cn/post/6844904197859573768#heading-16">对象的一些基础知识</a></p>
+</blockquote>
+<h3 id="2闭包">2.闭包</h3>
+<blockquote>
+<p>1.概念 2.应用
+概念：一个函数，能够访问外层函数的变量，例如：</p>
+</blockquote>
+<pre><code class="language-js"><span class="hljs-keyword">function</span> <span class="hljs-title function_">init</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">var</span> name = <span class="hljs-string">&quot;Mozilla&quot;</span>; <span class="hljs-comment">// name 是一个被 init 创建的局部变量</span>
+    <span class="hljs-keyword">function</span> <span class="hljs-title function_">displayName</span>(<span class="hljs-params"></span>) { <span class="hljs-comment">// displayName() 是内部函数，一个闭包</span>
+        <span class="hljs-title function_">alert</span>(name); <span class="hljs-comment">// 使用了父函数中声明的变量</span>
+    }
+    <span class="hljs-title function_">displayName</span>();
+}
+<span class="hljs-title function_">init</span>();
+</code></pre>
+<p>可以参考这一篇文章：<a href="https://juejin.cn/post/6937469222251560990#heading-0">JS 闭包经典使用场景和含闭包必刷题</a></p>
+<h3 id="3事件循环">3.事件循环</h3>
+<p>我之前看vue源码时候说到的<a href="https://juejin.cn/post/7002590321720688654#heading-3">事件循环</a></p>
+<h3 id="4js代码是如何执行的">4.js代码是如何执行的</h3>
+<p>有兴趣的可以翻一下ECMA 262，主要分为创建阶段和执行阶段，各干了什么事情。</p>
+<h3 id="5作用域链是如何形成的">5.作用域链是如何形成的</h3>
+<p><a href="https://juejin.cn/post/6844903797135769614#heading-0">深入理解JavaScript作用域和作用域链</a></p>
+<h3 id="6普通函数和箭头函数的区别">6.普通函数和箭头函数的区别</h3>
+<pre><code>1.箭头函数没有this
+
+2.箭头函数没有prototype
+
+3.无法修改箭头函数中的this指向
+
+4.没有arguments
+
+5.=&gt;无法new，且不支持重命名函数参数
+</code></pre>
+<h3 id="7深拷贝">7.深拷贝</h3>
+<pre><code>懂得都懂，主要要注意特殊类型的处理，例如Date, Function, RegExp，循环引用等等
+</code></pre>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> <span class="hljs-title function_">isObject</span> = o =&gt; <span class="hljs-title class_">Object</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>.<span class="hljs-property">toString</span>.<span class="hljs-title function_">call</span>(o) === <span class="hljs-string">&#x27;[object Object]&#x27;</span>
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">isArray</span> = o =&gt; <span class="hljs-title class_">Object</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>.<span class="hljs-property">toString</span>.<span class="hljs-title function_">call</span>(o) === <span class="hljs-string">&#x27;[object Array]&#x27;</span>
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">isDate</span> = o =&gt; <span class="hljs-title class_">Object</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>.<span class="hljs-property">toString</span>.<span class="hljs-title function_">call</span>(o) === <span class="hljs-string">&#x27;[object Date]&#x27;</span>
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">isNull</span> = o =&gt; o === <span class="hljs-literal">null</span>
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">deepClone</span> (<span class="hljs-title class_">Obj</span>) {
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> <span class="hljs-title class_">Obj</span> !== <span class="hljs-string">&#x27;object&#x27;</span>) <span class="hljs-keyword">return</span> <span class="hljs-title class_">Obj</span>
+    <span class="hljs-keyword">let</span> cloneObj = <span class="hljs-title function_">isArray</span>(<span class="hljs-title class_">Obj</span>[key]) ? [] : {}
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> key <span class="hljs-keyword">in</span> <span class="hljs-title class_">Obj</span>) {
+        <span class="hljs-keyword">if</span> (<span class="hljs-title function_">isObject</span>(<span class="hljs-title class_">Obj</span>[key]) || <span class="hljs-title function_">isArray</span>(<span class="hljs-title class_">Obj</span>[key])) {
+            cloneObj[key] = <span class="hljs-title function_">deepClone</span>(<span class="hljs-title class_">Obj</span>[key])
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_">isDate</span>(<span class="hljs-title class_">Obj</span>[key])) {
+            cloneObj[key] = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>(<span class="hljs-title class_">Obj</span>[key])
+        } <span class="hljs-keyword">else</span> {
+            cloneObj[key] = <span class="hljs-title class_">Obj</span>[key]
+        }
+    }
+
+    <span class="hljs-keyword">return</span> cloneObj
+}
+</code></pre>
+<h3 id="8手写promise">8.手写Promise</h3>
+<p>可以看这道题<a href="https://juejin.cn/post/6945319439772434469">从一道让我失眠的 Promise 面试题开始，深入分析 Promise 实现细节</a></p>
+<h3 id="9手写promiseallsettled和all">9.手写Promise.allSettled和All</h3>
+<pre><code class="language-js"><span class="hljs-title class_">Promise</span>.<span class="hljs-property">allSettled</span> = <span class="hljs-title class_">Promise</span>.<span class="hljs-property">allSettled</span> || <span class="hljs-keyword">function</span>(<span class="hljs-params">promises</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Promise</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params">resolve, reject</span>) {
+        <span class="hljs-keyword">if</span> (!<span class="hljs-title class_">Array</span>.<span class="hljs-title function_">isArray</span>(promises)) {
+            <span class="hljs-keyword">return</span> <span class="hljs-title function_">reject</span>(
+                <span class="hljs-keyword">new</span> <span class="hljs-title class_">TypeError</span>(<span class="hljs-string">&quot;arguments must be an array&quot;</span>)
+            );
+        }
+        <span class="hljs-keyword">var</span> resolvedCounter = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">var</span> promiseNum = promises.<span class="hljs-property">length</span>;
+        <span class="hljs-keyword">var</span> resolvedValues = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Array</span>(promiseNum);
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; promiseNum; i++) {
+            (<span class="hljs-keyword">function</span>(<span class="hljs-params">i</span>) {
+                <span class="hljs-title class_">Promise</span>.<span class="hljs-title function_">resolve</span>(promises[i]).<span class="hljs-title function_">then</span>(
+                    <span class="hljs-keyword">function</span>(<span class="hljs-params">value</span>) {
+                        resolvedCounter++;
+                        resolvedValues[i] = value;
+                        <span class="hljs-keyword">if</span> (resolvedCounter == promiseNum) {
+                            <span class="hljs-keyword">return</span> <span class="hljs-title function_">resolve</span>(resolvedValues);
+                        }
+                    },
+                    <span class="hljs-keyword">function</span>(<span class="hljs-params">reason</span>) {
+                        resolvedCounter++;
+                        resolvedValues[i] = reason;
+                        <span class="hljs-keyword">if</span> (resolvedCounter == promiseNum) {
+                            <span class="hljs-keyword">return</span> <span class="hljs-title function_">reject</span>(reason);
+                        }
+                    }
+                );
+            })(i);
+        }
+    });
+};
+
+<span class="hljs-comment">// 第二中用All实现</span>
+<span class="hljs-title class_">Promise</span>.<span class="hljs-property">allSettled</span> = <span class="hljs-keyword">function</span> (<span class="hljs-params">promises</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-title class_">Promise</span>.<span class="hljs-title function_">all</span>(promises.<span class="hljs-title function_">map</span>(<span class="hljs-function"><span class="hljs-params">p</span> =&gt;</span> <span class="hljs-title class_">Promise</span>.<span class="hljs-title function_">resolve</span>(p).<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> {
+      <span class="hljs-keyword">return</span> { <span class="hljs-attr">status</span>: <span class="hljs-string">&#x27;fulfilled&#x27;</span>, <span class="hljs-attr">value</span>: res }
+    }, <span class="hljs-function"><span class="hljs-params">error</span> =&gt;</span> {
+      <span class="hljs-keyword">return</span> { <span class="hljs-attr">status</span>: <span class="hljs-string">&#x27;rejected&#x27;</span>, <span class="hljs-attr">reason</span>: error }
+    })));
+}
+
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">all</span>(<span class="hljs-params">promises</span>) {
+    <span class="hljs-keyword">let</span> len = promises.<span class="hljs-property">length</span>, res = []
+    <span class="hljs-keyword">let</span> count = len
+    <span class="hljs-keyword">if</span> (len) {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Promise</span>(<span class="hljs-keyword">function</span> (<span class="hljs-params">resolve, reject</span>) {
+            
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i=<span class="hljs-number">0</span>; i&lt;len; i++) {
+                <span class="hljs-keyword">let</span> promise = promises[i];
+                promise.<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> {
+                    res[i] = response
+ 
+                    <span class="hljs-keyword">if</span> (!--count) {
+                        <span class="hljs-title function_">resolve</span>(res)
+                    }
+                    
+                }, <span class="hljs-function"><span class="hljs-params">error</span> =&gt;</span> {
+                    <span class="hljs-title function_">reject</span>(error)
+                })
+    
+            }
+        })
+    }
+}
+
+</code></pre>
+<h3 id="10以下代码输出什么">10.以下代码输出什么？</h3>
+<pre><code class="language-js"><span class="hljs-keyword">new</span> <span class="hljs-title class_">Promise</span>(<span class="hljs-function">() =&gt;</span> { 
+ <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> { 
+ <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-number">0</span>) 
+ }) 
+ <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-number">1</span>) 
+ <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Error</span>(<span class="hljs-string">&#x27;&#x27;</span>) 
+ <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-number">2</span>) 
+}).<span class="hljs-title function_">then</span>(<span class="hljs-function">() =&gt;</span> { 
+ <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-number">3</span>) 
+}, <span class="hljs-function">() =&gt;</span> { 
+ <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-number">4</span>) 
+}).<span class="hljs-title function_">catch</span>(<span class="hljs-function">() =&gt;</span> { 
+ <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-number">5</span>) 
+}).<span class="hljs-title function_">then</span>(<span class="hljs-function">() =&gt;</span> { 
+ <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-number">6</span>) 
+})
+</code></pre>
+<blockquote>
+<p>这里涉及到事件循环和Promise的原理。</p>
+<ol>
+<li>首先console.log(1)先执行</li>
+<li>然后抛出了一个错误，在下一个then中被reject掉了，所以会执行console.log(4)，而catch不会再执行了</li>
+<li>console.log(6)</li>
+<li>console.log(1)</li>
+</ol>
+</blockquote>
+<h2 id="3-网络相关">3. 网络相关</h2>
+<h2 id="4">4.</h2>
+
+            
+            
+        </body>
+        </html>

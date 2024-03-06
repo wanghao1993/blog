@@ -1,65 +1,39 @@
 module.exports = {
-  title: "天上的月亮",
+  title: '天上的月亮',
   description: 'About my thoughts and blog',
   dest: 'public',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
-    ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }]
+    [
+      'meta',
+      {
+        name: 'viewport',
+        content: 'width=device-width,initial-scale=1,user-scalable=no',
+      },
+    ],
   ],
   theme: 'reco',
   themeConfig: {
     subSidebar: 'auto',
     nav: [
-      { text: 'Home', link: '/', icon: 'reco-home' },
-      { text: '时间轴', link: '/timeline/', icon: 'reco-date' },
-      { text: '分类', 
-        icon: 'reco-doc',
-        items: [
-          { text: 'TypeScript', link: '/docs/typescript/' },
-          { text: 'Vue2.0源码解读', link: '/docs/vue/' },
-          { text: '性能优化', link: '/docs/optimization/' },
-          { text: '一些源码', link: '/docs/source-code/' },
-          // { text: '面试', link: '/docs/interview/' }
-        ]
-      },
-      { text: '标签', 
-        icon: 'reco-tag',
-        items: [
-          { text: 'JS', link: '/blogs/frontend/js/event' }
-        ]
-      },
-      { text: '社交', 
+      {
+        text: '社交',
         icon: 'reco-message',
         items: [
-          { text: 'GitHub', link: 'https://github.com/wanghao1993', icon: 'reco-github' },
-          { text: '掘金', link: 'https://juejin.cn/user/3227821868060695', icon: 'reco-github' }
-        ]
-      }
+          {
+            text: 'GitHub',
+            link: 'https://github.com/wanghao1993',
+            icon: 'reco-github',
+          },
+          {
+            text: '掘金',
+            link: 'https://juejin.cn/user/3227821868060695',
+            icon: 'reco-github',
+          },
+        ],
+      },
     ],
-    sidebar: {
-      '/docs/typescript/': [
-        '',
-        '1'
-      ],
-      '/docs/vue/': [
-        '1',
-        '2',
-        '3',
-        '4'
-      ],
-      '/docs/optimization/': [
-        '',
-        '1',
-        '2',
-        '3',
-      ],
-      '/docs/source-code/': [
-        '',
-        'vue-utils',
-        'devtools',
-        'vue-release'
-      ]
-    },  
+
     type: 'blog',
     // 博客设置
     blogConfig: {
@@ -69,21 +43,22 @@ module.exports = {
       // },
       tag: {
         location: 2, // 在导航栏菜单中所占的位置，默认3
-        text: '标签' // 默认 “标签”
-      }
+        text: '标签', // 默认 “标签”
+      },
     },
     friendLink: [
       {
         title: '蜉蝣撼树',
         desc: '不积硅步，无以至千里',
         email: '2682265436@qq.com',
-        link: 'https://super-super.cn/'
+        link: 'https://super-super.cn/',
       },
       {
         title: '公众号：前端工兵',
         // desc: 'A simple and beautiful vuepress Blog & Doc theme.',
-        avatar: "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
-        link: 'https://vuepress-theme-reco.recoluan.com'
+        avatar:
+          'https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png',
+        link: 'https://vuepress-theme-reco.recoluan.com',
       },
     ],
     logo: '/logo.png',
@@ -105,7 +80,7 @@ module.exports = {
     record: '粤ICP备2022001810号',
     cyberSecurityLink: 'https://beian.miit.gov.cn/',
     // 项目开始时间
-    startYear: '2022'
+    startYear: '2022',
     /**
      * 密钥 (if your blog is private)
      */
@@ -126,6 +101,6 @@ module.exports = {
     // }
   },
   markdown: {
-    lineNumbers: true
-  }
-}  
+    lineNumbers: true,
+  },
+}
